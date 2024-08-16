@@ -1,24 +1,35 @@
-
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <h1 class=" text-pink-800">hello</h1>
-    <!-- <img src="media/images/1.png" alt=""> -->
+    {% block body %}
+    {% endblock %}
+    
+    {% block js %}
+    {% endblock %}
+   
 </body>
+
 </html>
 
+
+<!-- 
 Admin Facing - Where admin user can add an android app as well as the number of points - earned by user for downloading the app. (Please do not use the default Django Admin)
 User Facing - where the user can see the apps added by the admin and the points. The user should be able to see the following fields. 
 Signup and Login (Feel free to use any package for the same). 
 Their Name and Profile
 Points Earned.
 Tasks completed. 
-Option to upload a screenshot (which must include drag and drop) for that particular task. (Like if a user downloads a particular app), he can send a screenshot of the open app to confirm that he has indeed downloaded the app. 
+Option to upload a screenshot (which must include drag and drop) for that particular task. (Like if a user downloads a particular app), he can send a screenshot of the open app to confirm that he has indeed downloaded the app.  -->

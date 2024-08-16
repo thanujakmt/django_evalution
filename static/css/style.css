@@ -558,8 +558,369 @@ video {
   position: static;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[850px\] {
+  height: 850px;
+}
+
+.h-\[830px\] {
+  height: 830px;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[300\] {
+  width: 300;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[0\%\] {
+  width: 0%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-\[8\%\] {
+  width: 8%;
+}
+
+.w-\[\%\] {
+  width: %;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
+.w-\[220px\] {
+  width: 220px;
+}
+
+.w-\[240px\] {
+  width: 240px;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
+.rounded-\[8px\] {
+  border-radius: 8px;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-blue-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
+.text-\[1\.2em\] {
+  font-size: 1.2em;
+}
+
+.text-\[1\.5em\] {
+  font-size: 1.5em;
+}
+
+.text-\[3em\] {
+  font-size: 3em;
+}
+
+.text-\[100px\] {
+  font-size: 100px;
+}
+
+.text-\[3\.5em\] {
+  font-size: 3.5em;
+}
+
+.text-\[3\.2em\] {
+  font-size: 3.2em;
+}
+
+.text-\[150px\] {
+  font-size: 150px;
+}
+
+.text-\[250px\] {
+  font-size: 250px;
+}
+
+.font-\[600\] {
+  font-weight: 600;
+}
+
+.font-\[500\] {
+  font-weight: 500;
+}
+
 .text-pink-800 {
   --tw-text-opacity: 1;
   color: rgb(157 23 77 / var(--tw-text-opacity));
+}
+
+.text-pink-600 {
+  --tw-text-opacity: 1;
+  color: rgb(219 39 119 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
