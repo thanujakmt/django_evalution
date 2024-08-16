@@ -1,0 +1,4 @@
+*__pycache__*
+cloudchimp_venv
+node_modules
+.vscode
