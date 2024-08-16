@@ -22,13 +22,18 @@
                 <div class=" flex flex-col gap-5">
                     <input type="text" name="" id="" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" >
                     <select name="Add Category" id="" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
-                        <option value="Add Category">Add Category </option>
+                        {% for cat in category %}
+                        <option value="Add Category">{{ cat }} </option>
+                        {% endfor %}
+
                     </select>
                 </div>
                 <div class=" flex flex-col gap-5">
                     <input type="text" name="" id="" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" >
                     <select name="Add Category" id="" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
-                        <option value="Sub Category">Sub Category </option>
+                        {% for subcategory in subcategories %}
+                        <option value="Sub Category">{{ subcategory }} </option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
