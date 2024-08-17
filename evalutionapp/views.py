@@ -8,3 +8,6 @@ def testview(request):
     categories = models.Category.objects.all()
     subcategories = models.SubCategory.objects.all()
     return render(request,'homepage/homepage.html',{"categories":categories,"subcategories":subcategories})
+
+def user_face_view(request):
+    return render(request,'components/user_face.html')

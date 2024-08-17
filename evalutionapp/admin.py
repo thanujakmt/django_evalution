@@ -19,4 +19,3 @@ admin.site.register(models.Category,CategoryAdmin)
 admin.site.register(models.SubCategory, SubCategoryAdmin)
 admin.site.register(models.App, AppAdmin)
 admin.site.register(models.AppPoint, AppPointAdmin)
-
