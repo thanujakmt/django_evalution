@@ -14,7 +14,7 @@ def admin_only(user):
 
 @user_passes_test(admin_only, login_url = '/login/', redirect_field_name= None)
 @login_required(login_url='/login/')
-def testview(request):
+def homepage(request):
     categories = models.Category.objects.all()
     subcategories = models.SubCategory.objects.all()
     return render(request,'homepage/homepage.html',{"categories":categories,"subcategories":subcategories})
