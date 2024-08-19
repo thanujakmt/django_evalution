@@ -582,6 +582,10 @@ video {
   height: 2.5rem;
 }
 
+.h-\[80\%\] {
+  height: 80%;
+}
+
 .h-\[830px\] {
   height: 830px;
 }
@@ -590,36 +594,32 @@ video {
   height: ;
 }
 
-.h-\[80\] {
-  height: 80;
+.h-\[200px\] {
+  height: 200px;
 }
 
-.h-\[80\%\] {
-  height: 80%;
+.h-\[400px\] {
+  height: 400px;
 }
 
-.h-\[800px\] {
-  height: 800px;
+.h-\[30\] {
+  height: 30;
 }
 
-.h-\[600px\] {
-  height: 600px;
+.h-\[25\%\] {
+  height: 25%;
 }
 
-.h-\[10px\] {
-  height: 10px;
+.h-\[100px\] {
+  height: 100px;
 }
 
-.h-\[90\%\] {
-  height: 90%;
+.max-h-\[25\%\] {
+  max-height: 25%;
 }
 
-.h-\[8\%\] {
-  height: 8%;
-}
-
-.h-\[85\%\] {
-  height: 85%;
+.min-h-\[25\%\] {
+  min-height: 25%;
 }
 
 .w-\[180px\] {
@@ -634,56 +634,24 @@ video {
   width: 240px;
 }
 
-.w-full {
-  width: 100%;
+.w-\[80\%\] {
+  width: 80%;
 }
 
-.w-80 {
-  width: 20rem;
+.w-full {
+  width: 100%;
 }
 
 .w-\[\] {
   width: ;
 }
 
-.w-\[80\] {
-  width: 80;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
-.w-\[800px\] {
-  width: 800px;
-}
-
-.w-\[600px\] {
-  width: 600px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[10px\] {
-  width: 10px;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
 .w-\[90\%\] {
   width: 90%;
 }
 
-.w-\[8\%\] {
-  width: 8%;
-}
-
-.w-\[85\%\] {
-  width: 85%;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .flex-col {
@@ -700,10 +668,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
 }
 
 .gap-10 {
@@ -773,24 +737,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pl-5 {
@@ -805,10 +754,6 @@ video {
   padding-top: 1.25rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-\[1\.2em\] {
   font-size: 1.2em;
 }
@@ -817,8 +762,24 @@ video {
   font-size: 1.5em;
 }
 
+.text-\[200px\] {
+  font-size: 200px;
+}
+
 .text-\[250px\] {
   font-size: 250px;
+}
+
+.text-\[100px\] {
+  font-size: 100px;
+}
+
+.text-\[220px\] {
+  font-size: 220px;
+}
+
+.text-\[210px\] {
+  font-size: 210px;
 }
 
 .font-\[500\] {
@@ -847,5 +808,9 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 

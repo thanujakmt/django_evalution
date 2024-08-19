@@ -1,6 +1,6 @@
 # **Evalution Test**
 
-Problem Set 1 - Regex
+**Problem Set 1 - Regex**
 
 1. Write a regex to extract all the numbers with orange color background from the below text in italics (Output should be a list).
 
@@ -19,7 +19,24 @@ print(numbers)
 
 Output:
 
-```
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 648, 649, 650, 651, 652, 653]
 
-```
+
+**Problem Set 3**
+
+**A.** Write and share a small note about your choice of system to schedule periodic tasks (such as downloading a list of ISINs every 24 hours). Why did you choose it? Is it reliable enough; Or will it scale? If not, what are the problems with it? And, what else would you recommend to fix this problem at scale in production?
+
+**Answer :** 
+
+For scheduling periodic tasks like downloading a list of ISINs every 24 hours, I chose **Celery with Celery Beat** because it's easy to integrate with Django, scales well, and is reliable. However, it can become complex to manage at scale and may be resource-intensive.
+
+If more scalability or complex task orchestration is needed, I recommend considering **Apache Airflow** for advanced workflows or
+**Kubernetes Cron Jobs** for containerized environments. For serverless setups, **AWS Lambda with EventBridge** is a cost-effective alternative.
+
+**B.** In what circumstances would you use Flask instead of Django and vice versa?
+
+**Answer :**
+
+The choice ultimately depends on our project’s specific needs, development timeline, and the level of control or structure we prefer.
+Use Flask for smaller, more flexible applications where you want to hand-pick our components and have full control over the stack.
+Use Django for larger, feature-rich applications where built-in tools and rapid development are priorities.
