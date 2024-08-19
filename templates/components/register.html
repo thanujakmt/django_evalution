@@ -1,30 +1,36 @@
 
 {% include 'layout.html' %}
 {% block body %}
-<div class=" w-full bg-white flex justify-center">
-    <form action="{% url 'register' %}" method="POST" class=" flex flex-col gap-6 mt-20">
-        {% csrf_token %}
-        <div class=" flex flex-col">
-            <label for="username" class=" text-[1.2em]">User Name :</label>
-            <input type="text" name="username" id="username" placeholder="Enter Your Name"
-                class=" border-2 rounded-[6px] px-2">
-        </div>
-        <div class=" flex flex-col">
-            <label for="email" class=" text-[1.2em]">Email :</label>
-            <input type="email" name="email" id="email" placeholder="Enter Your Name"
-                class=" border-2 rounded-[6px] px-2">
-        </div>
-        <div class=" flex flex-col">
-            <label for="password" class=" text-[1.2em]">Password :</label>
-            <input type="password" name="password" id="password" placeholder="Enter Your Name" class=" border-2 rounded-[6px] px-2">
-        </div>
-        <div class=" flex flex-col">
-            <label for="confirm_password" class=" text-[1.2em]">Confirm Password :</label>
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Your Name" class=" border-2 rounded-[6px] px-2">
-        </div>
-        <button type="submit"
-            class=" bg-blue-500 w-[150px] h-[30px] rounded-[10px] text-white font-[500] text-[1.2em]">Register</button>
-    </form>
-    <a href="{% url 'login' %}"> Click here for Login</a>
+<div class="flex flex-col justify-center items-center gap-10">
+    <div class=" bg-white flex justify-center">
+        <form action="{% url 'register' %}" method="POST" class=" flex flex-col gap-6 mt-20">
+            {% csrf_token %}
+            <div class=" flex flex-col">
+                <label for="username" class=" text-[1.2em]">User Name :</label>
+                <input type="text" name="username" id="username" placeholder="Enter Your Name"
+                    class=" border-2 rounded-[6px] px-2">
+            </div>
+            <div class=" flex flex-col">
+                <label for="email" class=" text-[1.2em]">Email :</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Name"
+                    class=" border-2 rounded-[6px] px-2">
+            </div>
+            <div class=" flex flex-col">
+                <label for="password" class=" text-[1.2em]">Password :</label>
+                <input type="password" name="password" id="password" placeholder="Enter Your Name"
+                    class=" border-2 rounded-[6px] px-2">
+            </div>
+            <div class=" flex flex-col">
+                <label for="confirm_password" class=" text-[1.2em]">Confirm Password :</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Your Name"
+                    class=" border-2 rounded-[6px] px-2">
+            </div>
+            <div class=" flex justify-center items-center">
+                <button type="submit"
+                    class=" bg-blue-500 w-[150px] h-[30px] rounded-[10px] text-white font-[500] text-[1.2em]">Register</button>
+            </div>
+        </form>
+    </div>
+    <a href="{% url 'login' %}" class=" text-blue-500"> Click here for Login</a>
 </div>
 {% endblock %}

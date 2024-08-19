@@ -4,10 +4,15 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from . import models
 
-# Create your views here.
+def admin_only(user):
+    return user.is_authenticated and (user.is_staff or user.is_superuser)
+
+
+
+@user_passes_test(admin_only, login_url = '/login/', redirect_field_name= None)
 @login_required(login_url='/login/')
 def testview(request):
     categories = models.Category.objects.all()
@@ -37,7 +42,10 @@ def login_view(request):
 
         if user is not None:
             login(request,user)
-            return redirect('homepage')
+            if not user.is_staff:
+                return redirect('userface')
+            else:
+                return redirect('homepage')
 
     return render(request,'components/login.html')
 
@@ -59,3 +67,9 @@ def register_view(request):
         return redirect('login')
 
     return render(request,'components/register.html')
+
+def upload_screenshort(request):
+    if request.method == 'POST':
+        file = request.Files[0]
+        
+    return render(request,'components/register.html') 

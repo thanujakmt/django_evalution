@@ -13,6 +13,13 @@
                 <i class="fa-solid fa-plus"></i>
                 Add
             </button>
+            <div class=" w-[200px] flex bg-white h-10 justify-between px-5 items-center font-[500] text-[1.2em] rounded-[10px] text-blue-600">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %} 
+                    <button type="submit" class="home">Logout</button>
+                </form>
+            </div>
         </div>
         <div class=" w-full bg-white ">
             <div class="text-[250px] text-gray-300 flex justify-center items-center">
@@ -37,7 +44,7 @@
                     </select>
                 </div>
             </div>
-            <div class="flex justify-center items-center mt-20 ">
+            <div class="flex justify-center items-center mt-20 cursor-pointer ">
                 <div class=" text-black bg-green-300 h-10 w-[180px] rounded-[8px] flex justify-center items-center font-[500]">ADD POINTS</div>
             </div>
         </div>
