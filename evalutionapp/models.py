@@ -39,3 +39,7 @@ class AppPoint(models.Model):
 
     def __str_(self):
         return self.points
+
+class ImageUpload(models.Model):
+    image = models.ImageField(upload_to='uploads/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)

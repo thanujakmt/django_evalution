@@ -6,11 +6,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, user_passes_test
 from . import models
+from .models import ImageUpload
+from django.http import JsonResponse
+from django.conf import settings
 
 def admin_only(user):
     return user.is_authenticated and (user.is_staff or user.is_superuser)
-
-
 
 @user_passes_test(admin_only, login_url = '/login/', redirect_field_name= None)
 @login_required(login_url='/login/')
@@ -68,8 +69,15 @@ def register_view(request):
 
     return render(request,'components/register.html')
 
-def upload_screenshort(request):
+def upload_screenshort(request,id):
     if request.method == 'POST':
-        file = request.Files[0]
-        
-    return render(request,'components/register.html') 
+        image_file = request.FILES['image']
+        app = models.App.objects.get(pk = id)
+        app.app_image = image_file
+        app.save()
+        image_url = f'{settings.MEDIA_URL}{app.app_image.name}'
+        return JsonResponse({'image': image_url})
+    return JsonResponse({'error': 'Invalid request'}, status=400)
+
+def testview(request):
+    return render(request,'components/test.html')
