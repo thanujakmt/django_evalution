@@ -72,12 +72,10 @@ def register_view(request):
 def upload_screenshort(request,id):
     if request.method == 'POST':
         image_file = request.FILES['image']
+        print(image_file)
         app = models.App.objects.get(pk = id)
         app.app_image = image_file
         app.save()
         image_url = f'{settings.MEDIA_URL}{app.app_image.name}'
         return JsonResponse({'image': image_url})
     return JsonResponse({'error': 'Invalid request'}, status=400)
-
-def testview(request):
-    return render(request,'components/test.html')
