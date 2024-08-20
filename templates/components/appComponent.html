@@ -1,10 +1,11 @@
-<a href="{% url 'userface' app.id %}">
-<div class=" h-[30%] w-[90%] bg-gray-200 flex justify-evenly items-center border-2 border-gray-400 ">
-    <img src="/media/{{ app.app_icon }}" alt="" srcset="" class="max-w-[100px]">
-    <div class=" flex flex-col">
-        <span>{{ app.app_name }}</span>
-        <a href="{{ app.app_link }}" class="  text-blue-600" >{{ app.app_link }}</a>
+
+
+    <div class=" h-[30%] w-[90%] bg-gray-200 flex justify-evenly items-center border-2 border-gray-400 ">
+        <img src="/media/{{ app.app_icon }}" alt="" srcset="" class="max-w-[100px]">
+        <div class=" flex flex-col">
+            <h1 class=" text-[25px] uppercase font-bold">{{ app.app_name }}</h1>
+            <a href="{% url 'userface' app.id %}" class="  text-blue-600">View in Details ></a>
+        </div>
+        <div class=" cursor-pointer bg-green-400 text-black font-[500] h-7 px-5 border border-green-600">150 POINTS
+        </div>
     </div>
-    <div class=" cursor-pointer bg-green-400 text-black font-[500] h-7 px-5 border border-green-600">150 POINTS</div>
-</div>
-</a>

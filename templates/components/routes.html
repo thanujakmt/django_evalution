@@ -15,7 +15,8 @@
     <i class="fa-solid fa-list-check"></i>
     <div class="home">Task</div>
 </a>
-<a class=" w-[200px] flex bg-white h-10 justify-between px-5 cursor-pointer items-center font-[500] text-[1.2em] rounded-[10px] text-blue-600">
+<form method="post" action="{% url 'logout' %}" class=" w-[200px] flex bg-white h-10 justify-between px-5 cursor-pointer items-center font-[500] text-[1.2em] rounded-[10px] text-blue-600">
+    {% csrf_token %}
     <i class="fa-solid fa-right-from-bracket"></i>
-    <div class="home">Logout</div>
-</a>
+    <button class="home">Logout</button>
+</form>

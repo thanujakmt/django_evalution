@@ -31,6 +31,7 @@ def app_view(request):
     print(allApps)
     return render(request,'components/app.html',{'apps':allApps})
 
+@login_required(login_url='/login/')
 def logout_view(request):
     
     if request.method == 'POST':
