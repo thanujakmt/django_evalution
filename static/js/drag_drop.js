@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
         dropArea.addEventListener('drop', function (e) {
             e.preventDefault();
             e.stopPropagation();
+            let id = dropArea.getAttribute('aria-label')
             e.target.classList.remove('bg_color');
             let files = e.dataTransfer.files;
-            handleFiles(files);
+            handleFiles(files,id);
             console.log(files)
         });
     } else {
@@ -34,12 +35,12 @@ const update_image = (imageUrl) =>{
 
 }
 
-function handleFiles(files) {
+function handleFiles(files,id) {
     let formData = new FormData();
     formData.append('image', files[0]);
     console.log(formData)
 
-    fetch('/upload/1', {
+    fetch(`/upload/${id}`, {
         method: 'POST',
         body: formData,
         headers: {

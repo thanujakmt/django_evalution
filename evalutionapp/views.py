@@ -21,12 +21,15 @@ def homepage(request):
     return render(request,'homepage/homepage.html',{"categories":categories,"subcategories":subcategories})
 
 @login_required(login_url='/login/')
-def user_face_view(request):
-    return render(request,'components/user_face.html')
+def user_face_view(request,id):
+    app = models.App.objects.get(pk = id)
+    return render(request,'components/user_face.html',{'app':app})
 
 @login_required(login_url='/login/')
 def app_view(request):
-    return render(request,'components/app.html')
+    allApps = models.App.objects.all()
+    print(allApps)
+    return render(request,'components/app.html',{'apps':allApps})
 
 def logout_view(request):
     
@@ -44,7 +47,7 @@ def login_view(request):
         if user is not None:
             login(request,user)
             if not user.is_staff:
-                return redirect('userface')
+                return redirect('app')
             else:
                 return redirect('homepage')
 

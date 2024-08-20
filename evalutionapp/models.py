@@ -22,7 +22,9 @@ class SubCategory(models.Model):
 class App(models.Model):
     app_name = models.CharField(max_length=250)
     app_link = models.TextField()
-    app_image = models.ImageField(upload_to='media/app_images/')
+    app_icon = models.ImageField(upload_to= 'app_images/')
+    app_image = models.ImageField(upload_to='app_images/')
+    app_points = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete= models.SET_NULL, null= True)
     subcategory = models.ForeignKey(SubCategory, on_delete= models.SET_NULL, null= True)
     created_at = models.DateTimeField(auto_now_add= True)
@@ -31,14 +33,14 @@ class App(models.Model):
     def __str__(self):
         return self.app_name
 
-class AppPoint(models.Model):
-    points = models.IntegerField()
-    app_name = models.ForeignKey(App, on_delete= models.CASCADE,unique= True)
-    created_at = models.DateTimeField(auto_now_add= True)
-    update_at = models.DateTimeField(auto_now= True)
+# class AppPoint(models.Model):
+#     points = models.IntegerField()
+#     app_name = models.ForeignKey(App, on_delete= models.CASCADE,unique= True)
+#     created_at = models.DateTimeField(auto_now_add= True)
+#     update_at = models.DateTimeField(auto_now= True)
 
-    def __str_(self):
-        return self.points
+#     def __str_(self):
+#         return self.points
 
 class ImageUpload(models.Model):
     image = models.ImageField(upload_to='uploads/')
