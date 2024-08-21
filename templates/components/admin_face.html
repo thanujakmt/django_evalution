@@ -22,31 +22,39 @@
             </div>
         </div>
         <div class=" w-full bg-white ">
-            <div class="text-[250px] text-gray-300 flex justify-center items-center">
-                <i class="fa-solid fa-image "></i>
+            <form action="{% url 'homepage' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div id="icon_wrapper" class=" border text-gray-300 flex justify-center items-center">
+                <img id="app_icon_image" class=" max-w-[200px] h-auto" src="media/images/image.png" alt="">
+                <input type="file" name="app_icon" id="app_icon" class="hidden">
+             
             </div>
             <div class=" flex justify-center items-center gap-24 mt-28">
                 <div class=" flex flex-col gap-5">
-                    <input type="text" name="" id="" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" placeholder="App name" >
-                    <select name="Add Category" id="" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
+                    <input type="text" name="app_name" id="app_name" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" placeholder="App name" >
+                    <select  id="category" name="category" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
                         {% for cat in category %}
-                        <option value="Add Category">{{ cat }} </option>
+                        <option value="{{ cat.id }}">{{ cat }} </option>
                         {% endfor %}
 
                     </select>
                 </div>
                 <div class=" flex flex-col gap-5">
-                    <input type="text" name="" id="" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" placeholder=" App link" >
-                    <select name="Add Category" id="" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
+                    <input type="text" name="app_link" id="app_link" class=" border border-blue-600 h-10 rounded-[8px] px-5 w-[240px]" placeholder=" App link" >
+                    <select  id="subcategory" name = "subcategory" class=" bg-gray-300 h-10 rounded-[8px] px-5 w-[240px]" >
                         {% for subcategory in subcategories %}
-                        <option value="Sub Category">{{ subcategory }} </option>
+                        <option value="{{ subcategory.id }}">{{ subcategory }} </option>
                         {% endfor %}
                     </select>
                 </div>
             </div>
             <div class="flex justify-center items-center mt-20 cursor-pointer ">
-                <div class=" text-black bg-green-300 h-10 w-[180px] rounded-[8px] flex justify-center items-center font-[500]">ADD POINTS</div>
+                <input type="number" name="points" placeholder="ADD POINTS" class=" border border-green-400 rounded-lg py-2 px-4 placeholder:text-[1.2em] placeholder:text-black placeholder:text-center bg-green-300">
             </div>
+            <div class="flex justify-center items-center mt-20 cursor-pointer">
+                <button class="bg-yellow-300 px-12 py-3 rounded-lg font-semibold" type="submit">Submit</button>
+            </div>
+        </form>
         </div>
     </div>
 </div>

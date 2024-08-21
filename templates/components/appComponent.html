@@ -6,6 +6,6 @@
             <h1 class=" text-[25px] uppercase font-bold">{{ app.app_name }}</h1>
             <a href="{% url 'userface' app.id %}" class="  text-blue-600">View in Details ></a>
         </div>
-        <div class=" cursor-pointer bg-green-400 text-black font-[500] h-7 px-5 border border-green-600">150 POINTS
+        <div class=" cursor-pointer bg-green-400 text-black font-[500] h-7 px-5 border border-green-600">{{ app.app_points }} POINTS
         </div>
     </div>

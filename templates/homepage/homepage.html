@@ -1,6 +1,12 @@
 
-{% include 'layout.html' %}
+{% extends 'layout.html' %}
+{% load static %}
 
 {% block body %}
     {% include 'components/admin_face.html' with category=categories subcategories=subcategories %}  
+{% endblock %}
+
+{% block js %}
+
+<script src="{% static 'js/admin_drag_drop.js' %}"></script>
 {% endblock %}

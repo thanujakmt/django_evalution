@@ -18,6 +18,27 @@ def admin_only(user):
 def homepage(request):
     categories = models.Category.objects.all()
     subcategories = models.SubCategory.objects.all()
+    if request.method == 'POST':
+        app_icon = request.FILES['app_icon']
+        form = request.POST
+        app_name = request.POST.get('app_name')
+        app_link = request.POST.get('app_link')
+        category = models.Category.objects.get(pk = request.POST.get('category'))
+        print(category)
+        subcategory = models.SubCategory.objects.get(pk=request.POST.get('subcategory'))
+        app_points = request.POST.get('points')
+       
+        app = models.App.objects.create(
+            app_name = app_name,
+            app_link = app_link,
+            app_icon = app_icon,
+            app_points = app_points,
+            category = category,
+            subcategory = subcategory
+
+        )
+        app.save()
+        return redirect('homepage')
     return render(request,'homepage/homepage.html',{"categories":categories,"subcategories":subcategories})
 
 @login_required(login_url='/login/')
