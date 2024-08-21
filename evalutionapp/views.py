@@ -24,7 +24,6 @@ def homepage(request):
         app_name = request.POST.get('app_name')
         app_link = request.POST.get('app_link')
         category = models.Category.objects.get(pk = request.POST.get('category'))
-        print(category)
         subcategory = models.SubCategory.objects.get(pk=request.POST.get('subcategory'))
         app_points = request.POST.get('points')
        
